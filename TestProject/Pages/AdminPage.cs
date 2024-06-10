@@ -14,7 +14,7 @@ namespace WebAutomation.Pages
     {
         #region default values
         public string DefaultUserName = "A.Clucas";
-        public string DefaultPassword = "Welcome549#";
+        public string DefaultPassword = "Welcome432#";
         #endregion
 
         #region page elements
