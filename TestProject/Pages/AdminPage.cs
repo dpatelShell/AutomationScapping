@@ -1,8 +1,14 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
+using System.Net.Http.Headers;
+using System.Text.Json.Nodes;
+using System.Text;
+using Newtonsoft.Json;
 using OpenQA.Selenium;
-using TestProject.Default;
+using WebAutomation.Default;
+using static System.Net.WebRequestMethods;
 
-namespace TestProject.Pages
+namespace WebAutomation.Pages
 {
     public class AdminPage : PageObject
     {
@@ -115,8 +121,15 @@ namespace TestProject.Pages
                     .Select(row => string.Join(",", row.ItemArray.Select(val => $"\"{val}\"")));
 
                 lines.AddRange(valueLines);
-
-                File.WriteAllLines("excel.csv", lines);
+                var jsonObject = JsonConvert.SerializeObject(dt.AsEnumerable().ToList());
+                string key = "alxTHVMrNIRRXmTOS0Wjk61wGLrH1joeY6XSaUuwq54uAzFuM65nRA==";
+                string url =
+                    "https://see-gasops-cop-function-dev.azurewebsites.net/api/ScrapperDataInsertIntoCop?code" + key;
+                HttpClient client = new HttpClient();
+                var content = new StringContent(jsonObject, Encoding.UTF8, "application/json");
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                var result = client.PostAsync(url, content).Result;
+                //File.WriteAllLines("excel.csv", lines);
             }
             catch (Exception e)
             {

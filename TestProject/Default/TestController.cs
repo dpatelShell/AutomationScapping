@@ -4,7 +4,7 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 
-namespace TestProject.Default
+namespace WebAutomation.Default
 {
     public class TestController
     {

@@ -1,6 +1,6 @@
-﻿using TestProject.Default;
+﻿using WebAutomation.Default;
 
-namespace TestProject.Default
+namespace WebAutomation.Default
 {
    public class PageObject
     {

@@ -1,6 +1,6 @@
-﻿using TestProject.Default;
+﻿using WebAutomation.Default;
 
-namespace TestProject.Pages
+namespace WebAutomation.Pages
 {
     public class LoginPage : PageObject
     {

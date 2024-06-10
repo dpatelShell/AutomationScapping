@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 
-namespace TestProject
+namespace WebAutomation
 {
     public enum Browsers
     {
@@ -13,7 +13,7 @@ namespace TestProject
     }
 }
 
-namespace TestProject.Default
+namespace WebAutomation.Default
 {
     public class DriverController
     {

@@ -1,4 +1,4 @@
-﻿namespace TestProject.Default
+﻿namespace WebAutomation.Default
 {
    public class DataController
     {

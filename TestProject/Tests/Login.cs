@@ -1,7 +1,7 @@
-﻿using TestProject.Default;
-using TestProject.Pages;
+﻿using WebAutomation.Default;
+using WebAutomation.Pages;
 
-namespace TestProject.Tests
+namespace WebAutomation.Tests
 {
     [TestClass]
     public class Login : TestController
